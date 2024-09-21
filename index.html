@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seni Çok Seviyorum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Parola Giriş Ekranı -->
+    <div class="password-container" id="passwordScreen">
+        <h2>Asla vazgeçmeyeceğim şey:</h2>
+        <input type="password" id="passwordInput" placeholder="Cevap nedir?" />
+        <button id="submitPassword">Giriş</button>
+        <p id="errorMessage" class="error-message"></p>
+    </div>
+
+    <!-- Ana Mesaj Ekranı (Başlangıçta gizlenmiş) -->
+    <div class="container" id="contentScreen" style="display:none;">
+        <h1 id="message">Sevim, seni çok seviyorum!</h1>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <div id="percent">0%</div>
+    </div>
+
+    <!-- Kelime Geçiş Ekranı -->
+    <div class="words-screen" id="wordsScreen" style="display:none;">
+        <div id="words"></div>
+    </div>
+
+    <!-- Mektup Şeklinde Yazı Yazma Alanı -->
+    <div class="letter-screen" id="letterScreen" style="display:none;">
+        <h2>Bi kaç cümle:</h2>
+        <textarea id="letterContent" readonly>
+Sevim, senin durumunu çok iyi biliyorum. Ne olduğunu sen, ne kadar beni kovsan da, git desen de benim gitmeye merakım filan yok. Bende SAT Komando iradesi felsefesi var: zoru severiz, imkansız zaman alır. Ben seni her şartta, her koşulda seviyorum. Benim uzaklarda atan kalbimsin.
+
+Allah biliyor kalbim, içim, duygularım nasıl gidiyor sesine, saçına, gözlerine, her şeyine. Ne olursa olsun, çok şükür seninle yolum kesiştiği için. Belki kalbin ağrır, üzülürsün, içinde bir burukluk olur, canın sıkılır. Unutma olur mu? Ben varım, senin her zaman yanındayım. Sana güveniyorum. Sen yapabilirsin, başarabilirsin. 
+
+Tekrar dünyaya gelsem, yine seni bulur, aşık olurum sana. Söylemek istediğim daha çok şey var, ama sabah ezanı okunuyor, çok düşünemiyorum şu an.
+        </textarea>
+        <button id="saveLetter">Tıkla</button>
+    </div>
+
+    <!-- Büyük Sevgi Mesajı ve Animasyonlar (Başlangıçta gizlenmiş) -->
+    <div class="final-screen" id="finalScreen" style="display:none;">
+        <div class="love-message" id="loveMessage">
+            Seni hep seveceğim heves değil nefes bu ❤️
+        </div>
+        <div class="stars"></div>
+        <div class="hearts"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

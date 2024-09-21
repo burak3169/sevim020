@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff9a9e, #fecfef);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.password-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+input[type="password"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff4757;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.progress-bar {
+    width: 100%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.progress {
+    width: 0;
+    height: 30px;
+    background-color: #fff;
+    transition: width 0.5s ease-in-out;
+}
+
+#percent {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.words-screen {
+    text-align: center;
+}
+
+#words {
+    font-size: 2.5rem;
+    color: #fff;
+    animation: fadeInOut 2s ease-in-out;
+}
+
+/* Mektup Şekli */
+.letter-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff7e6;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.letter-screen h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+textarea {
+    width: 80%;
+    height: 200px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fff7e6;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+    resize: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4757;
+}
+
+.final-screen {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ff6b6b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.love-message {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in;
+}
+
+.stars, .hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.stars {
+    background: url('https://image.shutterstock.com/image-vector/small-stars-glowing-260nw-1781425826.jpg') repeat;
+    animation: starsAnimation 10s linear infinite;
+}
+
+.hearts {
+    background: url('https://image.shutterstock.com/image-vector/pattern-red-hearts-transparent-background-260nw-1648326149.jpg') repeat;
+    animation: heartsAnimation 10s linear infinite;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes starsAnimation {
+    from { background-position: 0 0; }
+    to { background-position: -1000px 1000px; }
+}
+
+@keyframes heartsAnimation {
+    from { background-position: 0 0; }
+    to { background-position: 1000px -1000px; }
+}
